@@ -1,5 +1,10 @@
 # aeo-kit
 
+[![PyPI](https://img.shields.io/pypi/v/aeo-kit.svg)](https://pypi.org/project/aeo-kit/)
+[![Python](https://img.shields.io/pypi/pyversions/aeo-kit.svg)](https://pypi.org/project/aeo-kit/)
+[![CI](https://github.com/greymoth-jp/aeo-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/greymoth-jp/aeo-kit/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Zero-Click AEO toolkit** — turn any document, file, or website into LLM-readable
 Markdown + an `llms.txt` outline, then index and search it locally. A thin,
 clean composition of best-in-class open-source parts; it does not reinvent
