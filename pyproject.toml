@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeo-kit"
+version = "0.1.0"
+description = "Zero-Click AEO toolkit: crawl -> ingest -> index -> search, composing markitdown + turbovec + headroom."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "greymoth-jp" }]
+keywords = ["aeo", "geo", "llms.txt", "markdown", "rag", "crawler"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+
+# Core deps are MIT/Apache/permissive and ship their own wheels.
+# headroom-ai (Apache-2.0) is optional: only `aeo-ingest --compress` needs it.
+dependencies = [
+    "markitdown[docx,pptx,xlsx,pdf]>=0.1.6",  # MIT — doc -> markdown
+    "turbovec>=0.8.0",                          # vector index (air-gap RAG)
+    "numpy>=1.20",                              # BSD — TF-IDF vectors
+]
+
+[project.optional-dependencies]
+compress = ["headroom-ai>=0.27.0"]  # Apache-2.0 — token compression
+
+[project.urls]
+Homepage = "https://github.com/greymoth-jp/aeo-kit"
+Repository = "https://github.com/greymoth-jp/aeo-kit"
+Issues = "https://github.com/greymoth-jp/aeo-kit/issues"
+
+[project.scripts]
+aeo-ingest = "aeo_ingest:main"
+aeo-crawl = "crawl:main"
+aeo-search = "search:main"
+
+[tool.setuptools]
+py-modules = ["aeo_ingest", "crawl", "search"]
+packages = ["adapters"]
