@@ -9,7 +9,7 @@ description = "Zero-Click AEO toolkit: crawl -> ingest -> index -> search, compo
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "greymoth-jp" }]
+authors = [{ name = "mahirhir" }]
 keywords = ["aeo", "geo", "llms.txt", "markdown", "rag", "crawler"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -36,9 +36,9 @@ dependencies = [
 compress = ["headroom-ai>=0.27.0"]  # Apache-2.0 — token compression
 
 [project.urls]
-Homepage = "https://github.com/greymoth-jp/aeo-kit"
-Repository = "https://github.com/greymoth-jp/aeo-kit"
-Issues = "https://github.com/greymoth-jp/aeo-kit/issues"
+Homepage = "https://github.com/mahirhir/aeo-kit"
+Repository = "https://github.com/mahirhir/aeo-kit"
+Issues = "https://github.com/mahirhir/aeo-kit/issues"
 
 [project.scripts]
 aeo-ingest = "aeo_ingest:main"

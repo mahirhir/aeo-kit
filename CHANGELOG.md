@@ -25,4 +25,4 @@ First release.
 [markitdown]: https://github.com/microsoft/markitdown
 [headroom-ai]: https://github.com/chopratejas/headroom
 [turbovec]: https://github.com/RyanCodrai/turbovec
-[0.1.0]: https://github.com/greymoth-jp/aeo-kit/releases/tag/v0.1.0
+[0.1.0]: https://github.com/mahirhir/aeo-kit/releases/tag/v0.1.0
